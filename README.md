@@ -11,69 +11,69 @@
 
 - 특정 위치의 X, Y 좌표를 저장하는 구조체
 
-```
-typedef struct s_pos
-{
-	int x;
-	int y;
-}	t_pos;
-```
+	```
+	typedef struct s_pos
+	{
+		int x;
+		int y;
+	}	t_pos;
+	```
 
 - 맵 정보 : 가로 길이, 세로 길이, 출구 개수, 플레이어 개수, 플레이어의 좌표, 플레이어의 걸음, 수집품 개수
 - minilibx에 필요한 변수 : mlx, win, img 포인터, 출력할 이미지에 대한 width, height 정보
 
-```
-typedef struct s_var
-{
-	int	x;
-	int	y;
-	int	end;
-	int	player;
-	struct s_pos	p_pos;
-	int	step;
-	int	collect;
-	char	**map;
-	void	*mlx;
-	void	*win;
-	void	*img;
-	int	img_width;
-	int	img_height;
-}	t_var;
-```
+	```
+	typedef struct s_var
+	{
+		int	x;
+		int	y;
+		int	end;
+		int	player;
+		struct s_pos	p_pos;
+		int	step;
+		int	collect;
+		char	**map;
+		void	*mlx;
+		void	*win;
+		void	*img;
+		int	img_width;
+		int	img_height;
+	}	t_var;
+	```
 
 - flood-fill 에서 사용되는 큐 노드, 큐 구조체
 
-```
-typedef struct s_node
-{
-	struct s_pos	pos;
-	struct s_node	*next;
-}	t_node;
-
-typedef struct s_queue
-{
-	t_node	*front;
-	t_node	*rear;
-	int	count;
-}	t_queue; 
-```
+	```
+	typedef struct s_node
+	{
+		struct s_pos	pos;
+		struct s_node	*next;
+	}	t_node;
+	
+	typedef struct s_queue
+	{
+		t_node	*front;
+		t_node	*rear;
+		int	count;
+	}	t_queue; 
+	```
 
 - 키 이벤트에 사용되는 열거형
 
-```
-typedef enum e_key
-{
-	W = 13,
-	A = 0,
-	S,
-	D,
-	L = 123,
-	R,
-	DN,
-	UP,
-	ESC = 53,
-}	t_key;
-```
+	```
+	typedef enum e_key
+	{
+		W = 13,
+		A = 0,
+		S,
+		D,
+		L = 123,
+		R,
+		DN,
+		UP,
+		ESC = 53,
+	}	t_key;
+	```
 
 ## 함수 설명 (Mandatory Part)
 
