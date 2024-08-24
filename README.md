@@ -14,8 +14,8 @@
 ```
 typedef struct s_pos
 {
-	int	x;
-	int	y;
+	int x;
+	int y;
 }	t_pos;
 ```
 
@@ -25,19 +25,19 @@ typedef struct s_pos
 ```
 typedef struct s_var
 {
-	int				x;
-	int				y;
-	int				end;
-	int				player;
+	int	x;
+	int	y;
+	int	end;
+	int	player;
 	struct s_pos	p_pos;
-	int				step;
-	int				collect;
-	char			**map;
-	void			*mlx;
-	void			*win;
-	void			*img;
-	int				img_width;
-	int				img_height;
+	int	step;
+	int	collect;
+	char	**map;
+	void	*mlx;
+	void	*win;
+	void	*img;
+	int	img_width;
+	int	img_height;
 }	t_var;
 ```
 
@@ -54,7 +54,7 @@ typedef struct s_queue
 {
 	t_node	*front;
 	t_node	*rear;
-	int		count;
+	int	count;
 }	t_queue; 
 ```
 
